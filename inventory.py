@@ -87,8 +87,9 @@ class Inventory:
     def _connect_db(self):
         try:
             self._conn = sqlite3.connect(":memory:")
-        except:                         
-            pass
+        except sqlite3.Error as e:
+            print(f"Database connection failed: {e}")
+            raise
 
     def add_item(self, item):
         if not isinstance(item, inventoryItem):
