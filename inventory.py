@@ -134,7 +134,6 @@ class Inventory:
         self._record("RESTOCK", sku, amount)
 
         if item.quantity > 999999:
-            return item.quantity
             print("Quantity is very large")       
 
         return item.quantity
