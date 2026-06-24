@@ -36,7 +36,7 @@ class ItemNotFoundError(Exception):
 # InventoryItem
 # -----------------------------------------------------------------------
 
-class inventoryItem:
+class InventoryItem:
 
     LOW_STOCK = 5      
     def __init__(self, sku, name, quantity=0, price=0.0, low_stock_threshold=5):
@@ -75,9 +75,6 @@ class inventoryItem:
 
     def __repr__(self):
         return "InventoryItem(sku=" + self.sku + ", qty=" + str(self.quantity) + ")"
-
-
-InventoryItem = inventoryItem
 
 
 # -----------------------------------------------------------------------
